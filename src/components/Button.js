@@ -22,3 +22,29 @@ export const Button = styled(Link)`
     transform: translateY(-2px);
   }
 `;
+
+export const EmailButton = styled(Link)`
+  background: #cd853f;
+  white-space: nowrap;
+  outline: none;
+  border-radius: 3px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 11px 20px;
+  /* margin: 10px 0px; */
+  color: #fff;
+  max-width: 150px;
+  font-size: ${({ big }) => (big ? '20px' : '14px')};
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  @media screen and (max-width: 960px) {
+    width: 100%;
+  }
+`;
