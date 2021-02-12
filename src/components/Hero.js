@@ -147,7 +147,7 @@ const Hero = ({ slides }) => {
       setCurrent((current) => (current === length - 1 ? 0 : current + 1));
     };
 
-    timeout.current = setTimeout(nextSlide, 3000);
+    timeout.current = setTimeout(nextSlide, 5000);
 
     return function () {
       clearTimeout(timeout.current);

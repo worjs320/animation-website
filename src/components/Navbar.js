@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { Link } from 'react-router-dom';
 import { menuData } from '../data/MenuData';
@@ -14,6 +14,8 @@ const Nav = styled.nav`
   z-index: 100;
   position: fixed;
   width: 100%;
+  background: ${({ navBg }) => (navBg ? '#cd853f' : 'transparent')};
+  transition: 1s;
 `;
 
 const NavLink = css`
@@ -73,8 +75,20 @@ const NavBtn = styled.div`
 `;
 
 const Navbar = ({ toggle }) => {
+  const [navBg, setNavBg] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavBg(true);
+    } else {
+      setNavBg(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
+
   return (
-    <Nav>
+    <Nav navBg={navBg}>
       <Logo to="/">BARAK</Logo>
       <MenuBars onClick={toggle} />
       <NavMenu>
