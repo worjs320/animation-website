@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
 import Bars from '../images/bars.svg';
-// import { FaBars } from 'react-icons/fa';
+import * as Scroll from 'react-scroll';
 
 const Nav = styled.nav`
   height: 60px;
@@ -60,7 +60,7 @@ const NavMenu = styled.div`
   }
 `;
 
-const NavMenuLinks = styled(Link)`
+const NavMenuLinks = styled(Scroll.Link)`
   ${NavLink}
 `;
 
@@ -93,7 +93,13 @@ const Navbar = ({ toggle }) => {
       <MenuBars onClick={toggle} />
       <NavMenu>
         {menuData.map((item, index) => (
-          <NavMenuLinks to={item.link} key={index}>
+          <NavMenuLinks
+            to={item.link}
+            key={index}
+            spy={true}
+            smooth={true}
+            offset={item.link !== '/homes' ? 30 : 0}
+          >
             {item.title}
           </NavMenuLinks>
         ))}
