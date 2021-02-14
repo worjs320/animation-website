@@ -66,6 +66,20 @@ const fadeIn = keyframes`
   }
 `;
 
+const fadeInDown = keyframes`
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+`;
+
 const HeroImage = styled.img`
   position: absolute;
   top: 0;
@@ -92,11 +106,20 @@ const HeroContent = styled.div`
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
     text-align: left;
     margin-bottom: 0.8rem;
+    animation: ${fadeInDown} 1s both;
+    animation-delay: 0s;
   }
 
   p {
     margin-bottom: 1.2rem;
     text-shadow: 0px 0px 20px rgba(0, 0, 0, 0.4);
+    animation: ${fadeInDown} 1s both;
+    animation-delay: 0.5s;
+  }
+
+  ${Button} {
+    animation: ${fadeIn} 1s both;
+    animation-delay: 1s;
   }
 `;
 const Arrow = styled(IoMdArrowRoundForward)`
@@ -172,12 +195,12 @@ const Hero = ({ slides }) => {
   }
 
   return (
-    <HeroSection>
+    <HeroSection name="/homes">
       <HeroWrapper>
         {slides.map((slide, index) => {
           return (
             <HeroSlide key={index}>
-              {index == current && (
+              {index === current && (
                 <HeroSlider>
                   <HeroImage src={slide.image} alt={slide.alt} />
                   <HeroContent>
