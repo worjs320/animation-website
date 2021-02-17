@@ -1,9 +1,10 @@
 import React from 'react';
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
 import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
+import * as Scroll from 'react-scroll';
 
 const DropdownContainer = styled.div`
   position: fixed;
@@ -48,7 +49,7 @@ const DropdownMenu = styled.div`
   }
 `;
 
-const DropdownLink = styled(Link)`
+const DropdownLink = css`
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,6 +70,10 @@ const BtnWrap = styled.div`
   justify-content: center;
 `;
 
+const NavMenuLinks = styled(Scroll.Link)`
+  ${DropdownLink}
+`;
+
 const Dropdown = ({ isOpen, toggle }) => {
   return (
     <DropdownContainer isOpen={isOpen} onClick={toggle}>
@@ -78,9 +83,16 @@ const Dropdown = ({ isOpen, toggle }) => {
       <DropdownWrapper>
         <DropdownMenu>
           {menuData.map((item, index) => (
-            <DropdownLink to={item.link} key={index}>
+            <NavMenuLinks
+              to={item.link}
+              key={index}
+              spy={true}
+              smooth={true}
+              offset={item.link !== '/homes' ? 30 : 0}
+              onClick={toggle}
+            >
               {item.title}
-            </DropdownLink>
+            </NavMenuLinks>
           ))}
         </DropdownMenu>
         <BtnWrap>
