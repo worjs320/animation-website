@@ -1,5 +1,7 @@
 import ImageOne from '../images/Paris.jpg';
 import ImageTwo from '../images/Saltzburg.jpg';
+import ImageThree from '../images/Prague.jpg';
+import ImageFour from '../images/Carezza.jpg';
 
 export const InfoData = {
   heading: 'Paris',
@@ -22,5 +24,17 @@ export const InfoDataTwo = {
   buttonLabel: 'View Homes',
   image: ImageTwo,
   reverse: true,
+  delay: 300,
+};
+
+export const InfoDataThree = {
+  heading: 'Europe',
+  paragraphOne:
+    'Lake Carezza is a small alpine lake in the Dolomites in South Tyrol, Italy.',
+  paragraphTwo:
+    'Prague is a political, cultural and economic centre of central Europe complete with a rich history.',
+  imageOne: ImageFour,
+  imageTwo: ImageThree,
+  buttonLabel: 'View More',
   delay: 300,
 };

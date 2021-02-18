@@ -2,9 +2,8 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 import { menuData } from '../data/MenuData';
 import { Button } from './Button';
-import { Link } from 'react-router-dom';
 import { FaTimes } from 'react-icons/fa';
-import * as Scroll from 'react-scroll';
+import { Link } from 'react-scroll';
 
 const DropdownContainer = styled.div`
   position: fixed;
@@ -70,7 +69,7 @@ const BtnWrap = styled.div`
   justify-content: center;
 `;
 
-const NavMenuLinks = styled(Scroll.Link)`
+const NavMenuLinks = styled(Link)`
   ${DropdownLink}
 `;
 
