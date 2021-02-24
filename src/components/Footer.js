@@ -172,7 +172,7 @@ const Footer = () => {
     <FooterContainer>
       <FooterSubscription>
         <FooterSubHeading>
-          Join the Adventure newsletter to receive our best vacation deals.
+          Join the BARAK to receive our best vacation deals.
         </FooterSubHeading>
         <FooterSubText>You can unsubscribe at any time.</FooterSubText>
         <Form>
@@ -187,38 +187,38 @@ const Footer = () => {
       <FooterLinkContainer>
         <FooterLinkWrapper>
           <FooterLinkItems>
-            <FooterLinkTitle>About Us</FooterLinkTitle>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
+            <FooterLinkTitle>Africa</FooterLinkTitle>
+            <FooterLink>Nigeria</FooterLink>
+            <FooterLink>Ethiopia</FooterLink>
+            <FooterLink>Egypt</FooterLink>
+            <FooterLink>DR Congo</FooterLink>
+            <FooterLink>Tanzania</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
-            <FooterLinkTitle>About Us2</FooterLinkTitle>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
+            <FooterLinkTitle>Europe</FooterLinkTitle>
+            <FooterLink>Austria</FooterLink>
+            <FooterLink>Spain</FooterLink>
+            <FooterLink>Germany</FooterLink>
+            <FooterLink>France</FooterLink>
+            <FooterLink>Italy</FooterLink>
           </FooterLinkItems>
         </FooterLinkWrapper>
         <FooterLinkWrapper>
           <FooterLinkItems>
-            <FooterLinkTitle>About Us3</FooterLinkTitle>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
+            <FooterLinkTitle>East Asia</FooterLinkTitle>
+            <FooterLink>Mongolia</FooterLink>
+            <FooterLink>South Korea</FooterLink>
+            <FooterLink>Japan</FooterLink>
+            <FooterLink>Taiwan</FooterLink>
+            <FooterLink>China</FooterLink>
           </FooterLinkItems>
           <FooterLinkItems>
-            <FooterLinkTitle>About Us4</FooterLinkTitle>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
-            <FooterLink>test1</FooterLink>
+            <FooterLinkTitle>Americas</FooterLinkTitle>
+            <FooterLink>United States</FooterLink>
+            <FooterLink>Brazil</FooterLink>
+            <FooterLink>Mexico</FooterLink>
+            <FooterLink>Colombia</FooterLink>
+            <FooterLink>Argentina</FooterLink>
           </FooterLinkItems>
         </FooterLinkWrapper>
       </FooterLinkContainer>
@@ -226,7 +226,7 @@ const Footer = () => {
         <SocialMediaWrap>
           <SocialLogo to="/">
             <SocialIcon />
-            BARAK
+            &nbsp;BARAK
           </SocialLogo>
           <WebsiteRights>BARAK © {currentYear}</WebsiteRights>
           <SocialIcons>
